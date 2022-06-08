@@ -1,0 +1,48 @@
+html, body {
+	user-select: none;
+	overflow: hidden;
+	margin: 0;
+
+	/*font-family: Menlo, monospace;*/
+}
+
+.selectable {
+	padding: 2px 5px;
+}
+.selectable:hover {
+	background-color: #ddd; /* temp */
+}
+.done {
+	background-color: #bbb;
+}
+
+
+#menu {
+	white-space: nowrap;
+	inset:    auto;
+	padding: 5px;
+	/*border:   1px solid #000;*/
+	display:  none;
+	position: fixed;
+	background-color: #ccc;
+}
+
+#header {
+	padding: 0 5px;
+	height: 4vh;
+	width: 100vw;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #999;
+}
+
+#blocks {
+	display: flex;
+}
+#block_task {
+	background-color: #fff; /* temp */
+	overflow: auto;
+	overflow-wrap: anywhere;
+	height: 96vh;
+	width:  100vw;
+}
