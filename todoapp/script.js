@@ -44,7 +44,7 @@ function mkMenu(text, func){
 	div.textContent = text;
 	div.classList.add("selectable");
 	div.onclick = func;
-	elemMenu.prepend(div);
+	elemMenu.appendChild(div);
 }
 
 function clickMenu(elem, mouseEvent){
