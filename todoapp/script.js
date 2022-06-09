@@ -5,8 +5,7 @@ let tempListName = window.prompt("リスト名の入力");
 const listName = tempListName !== null && tempListName.length > 0 ? tempListName : "default";
 
 window.onload = () => {
-	let t = document.getElementById("header");
-	t.textContent = `${t.textContent} : ${listName}`;
+	document.getElementById("header").textContent = listName;
 	
 	if (localStorage.getItem(listName) !== null) {
 		const tasks = JSON.parse(localStorage.getItem(listName));
