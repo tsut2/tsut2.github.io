@@ -16,6 +16,10 @@ html, body {
 	background-color: #bbb;
 }
 
+#empty {
+	width: 100vw;
+	height: 30vh;
+}
 
 #menu {
 	white-space: nowrap;
