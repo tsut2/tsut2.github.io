@@ -111,3 +111,16 @@ function clickMenu(elem, mouseEvent){
 	mouseEvent.preventDefault();
 	mouseEvent.stopPropagation();
 }
+function test_setTasks(count = 32){
+	let data = [];
+	for (let i = 0; i < count; i++){
+		data.push([
+			genIdentifier(),
+			Math.random() > 0.5,
+			`testTask_${genIdentifier(8)}`
+		])
+	}
+	localStorage.setItem(listName, JSON.stringify(data));
+	window.alert(`リスト名:${listName}に${count}個\nリロードします`);
+	window.location.reload();
+}
