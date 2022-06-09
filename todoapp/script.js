@@ -63,7 +63,7 @@ function clickMenu(elem, mouseEvent){
 			mkMenu("編集", () => {
 				const oldText = elem.textContent;
 				const newText = window.prompt("", oldText)
-				elem.textContent = newText.length > 0 ? newText : oldText;
+				elem.textContent = newText !== null && newText.length > 0 ? newText : oldText;
 			});
 			mkMenu(elem.classList.contains("done") ? "未完了" : "完了", () => {
 				elem.classList.toggle("done")
