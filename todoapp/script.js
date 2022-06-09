@@ -17,7 +17,7 @@ window.onload = () => {
 				"contextmenu",
 				(event) => clickMenu(div, event)
 			);
-			document.getElementById("block_task").appendChild(div);
+			document.getElementById("block_task").prepend(div);
 		}
 	}
 
@@ -44,7 +44,7 @@ function mkMenu(text, func){
 	div.textContent = text;
 	div.classList.add("selectable");
 	div.onclick = func;
-	elemMenu.appendChild(div);
+	elemMenu.prepend(div);
 }
 
 function clickMenu(elem, mouseEvent){
@@ -80,7 +80,7 @@ function clickMenu(elem, mouseEvent){
 				"contextmenu",
 				(event) => clickMenu(div, event)
 			);
-			document.getElementById("block_task").appendChild(div);
+			document.getElementById("block_task").prepend(div);
 		});
 		mkMenu("完了済を消す", () => {
 			let count = 0, array = [];
@@ -111,16 +111,11 @@ function clickMenu(elem, mouseEvent){
 	mouseEvent.preventDefault();
 	mouseEvent.stopPropagation();
 }
-function test_setTasks(count = 32){
-	let data = [];
-	for (let i = 0; i < count; i++){
-		data.push([
-			genIdentifier(),
-			Math.random() > 0.5,
-			`testTask_${genIdentifier(8)}`
-		])
-	}
+
+const test_setTasks = (c=32) => {
+	let data=[];
+	for (let i=0; i<c;i++){data.push([genIdentifier(),Math.random()>0.5,`testTask_${genIdentifier(8)}`])}
 	localStorage.setItem(listName, JSON.stringify(data));
-	window.alert(`リスト名:${listName}に${count}個\nリロードします`);
+	window.alert(`リスト名:${listName}に${c}個\nリロードします`);
 	window.location.reload();
 }
