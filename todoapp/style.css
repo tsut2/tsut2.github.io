@@ -22,14 +22,14 @@ html, body {
 }
 #block_list {
 	height: 96vh;
-	width:  20vw;
+	width:  15vw;
 	overflow: auto;
 	overflow-wrap: anywhere;
 	background-color: #2c2a32;
 }
 #block_task {
 	height: 96vh;
-	width:  80vw;
+	width:  85vw;
 	overflow: auto;
 	overflow-wrap: anywhere;
 	background-color: #27232d;
