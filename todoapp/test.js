@@ -27,4 +27,5 @@ function clearAll(){
 	removeChildren("block_list");
 	removeChildren("block_task");
 	localStorage.clear()
+	location.reload();
 }
