@@ -3,6 +3,7 @@ html, body {
 	overflow: hidden;
 	margin: 0;
 	font-family: "Noto Sans JP", monospace;
+	color: #ccc;
 }
 
 
@@ -12,7 +13,7 @@ html, body {
 	width: 100vw;
 	display: table-cell;
 	vertical-align: middle;
-	background-color: #eee;
+	background-color: #38343b;
 }
 
 
@@ -24,23 +25,24 @@ html, body {
 	width:  20vw;
 	overflow: auto;
 	overflow-wrap: anywhere;
-	background-color: #ddd;
+	background-color: #2c2a32;
 }
 #block_task {
 	height: 96vh;
 	width:  80vw;
 	overflow: auto;
 	overflow-wrap: anywhere;
-	background-color: #ccc;
+	background-color: #27232d;
 }
 
 #menu {
 	white-space: nowrap;
 	inset:    auto;
+	border: solid #6d6872;
 	padding: 5px;
 	display:  none;
 	position: fixed;
-	background-color: #bbb;
+	background-color: #2f2e36;
 }
 
 
@@ -48,14 +50,20 @@ html, body {
 	padding: 2px 5px;
 }
 .selectable:hover {
-	background-color: #aaa;
+	background-color: #4d4852;
+}
+.selectable:hover.done {
+	background-color: #264a55;
 }
 .empty {
 	height: 25%;
 }
-.done,.open {
-	background-color: #999;
+.done {
+	background-color: #163a38;
+}
+.open {
+	background-color: #6d6872;
 }
 .expired {
-	background-color: darkkhaki;
+	color: darkkhaki;
 }
