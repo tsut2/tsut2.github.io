@@ -2,51 +2,60 @@ html, body {
 	user-select: none;
 	overflow: hidden;
 	margin: 0;
-
-	/*font-family: Menlo, monospace;*/
+	font-family: "Noto Sans JP", monospace;
 }
 
-.selectable {
-	padding: 2px 5px;
-}
-.selectable:hover {
-	background-color: #ddd; /* temp */
-}
-.done {
-	background-color: #bbb;
-}
 
-#empty {
+#head {
+	padding: 0 5px;
+	height: 4vh;
 	width: 100vw;
-	height: 30vh;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #eee;
+}
+
+
+#block {
+	display: flex;
+}
+#block_list {
+	height: 96vh;
+	width:  20vw;
+	overflow: auto;
+	overflow-wrap: anywhere;
+	background-color: #ddd;
+}
+#block_task {
+	height: 96vh;
+	width:  80vw;
+	overflow: auto;
+	overflow-wrap: anywhere;
+	background-color: #ccc;
 }
 
 #menu {
 	white-space: nowrap;
 	inset:    auto;
 	padding: 5px;
-	/*border:   1px solid #000;*/
 	display:  none;
 	position: fixed;
-	background-color: #ccc;
+	background-color: #bbb;
 }
 
-#header {
-	padding: 0 5px;
-	height: 4vh;
-	width: 100vw;
-	display: table-cell;
-	vertical-align: middle;
+
+.selectable {
+	padding: 2px 5px;
+}
+.selectable:hover {
+	background-color: #aaa;
+}
+.empty {
+	height: 25%;
+}
+.done,.open {
 	background-color: #999;
 }
-
-#blocks {
-	display: flex;
-}
-#block_task {
-	background-color: #fff; /* temp */
-	overflow: auto;
-	overflow-wrap: anywhere;
-	height: 96vh;
-	width:  100vw;
+.expired {
+	background-color: darkkhaki;
 }
