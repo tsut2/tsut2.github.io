@@ -55,14 +55,8 @@ function loadLists(){
 	} else {
 		const data_l = ["説明"];
 		const data_t = [
-			["左にあるのはリストです", false, 0],
-			["クリックでリストを開きます", false, 0],
-			["右にあるのはタスクです", false, 0],
-			["クリックで完了済みに切り替えます", false, 0],
-			["完了済みになると色が変わります", true, 0],
-			["もう一度クリックすることで未完了に戻せます", false, 0],
-			["右クリックでメニューを開きます", false, 0],
-			["リストの追加, 編集などを行えます", false, 0]
+			["左のリストをクリックして開く", false, 0],
+			["右クリックでメニューを開く", false, 0]
 		];
 
 		localStorage.setItem("listNames", JSON.stringify(data_l));
