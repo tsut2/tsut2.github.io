@@ -97,6 +97,7 @@ function removeList(elem){
 			removeChildren("block_task");
 		}
 		localStorage.removeItem("L"+elem.textContent);
+		currentList = null;
 	}
 }
 function mkList(name){
